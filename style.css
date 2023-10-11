@@ -1,0 +1,452 @@
+/*
+Geïnspireerd door https://www.rarebits.co.uk/
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+header, main {
+  max-width: 92rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+header {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+header a img {
+  width: 170px;
+}
+
+header nav {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+header nav li {
+  flex: 1 1 100%;
+}
+
+header nav li:not(:last-child) {
+  border-bottom: 2px solid #fff;
+}
+
+header nav a {
+  display: block;
+  color: #fff;
+  background-color: #5eba5e;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+header nav a:hover {
+  background-color: #3d8f3d;
+}
+
+.huidig {
+  background-color: #94d194;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #3d8f3d;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 2.9rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+h1 + p {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+aside {
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #cfe2cf;
+  border-bottom: 1px solid #cfe2cf;
+}
+
+table {
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+th:nth-child(2) {
+  padding-left: 0.6rem;
+}
+
+td:nth-child(2) {
+  padding-left: 0.6rem;
+}
+
+footer {
+  color: #fff;
+  background-color: #5eba5e;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* ------------------------ HOME ------------------------ */
+
+.home main > img {
+  width: 675px;
+}
+
+.home th:first-child {
+  width: 6.5rem;
+  text-align: right;
+}
+
+.home th:nth-child(2) {
+  font-weight: bold;
+}
+
+/* ------------------------ PRODUCTEN ------------------------ */
+
+.producten h2 {
+  /* display: block; */
+  color: #fff;
+  background-color: #5eba5e;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* .producten h2:not(:first-of-type) {
+  margin-top: 3rem;
+} */
+
+.producten th {
+  font-weight: bold;
+}
+
+.producten th:first-child {
+  width: 10rem;
+}
+
+/* ------------------------ OVER ONS ------------------------ */
+
+.over-ons main img {
+  margin-bottom: 0.5rem;
+}
+
+.over-ons p:not(:first-of-type) {
+  margin-bottom: 3rem;
+}
+
+/* ------------------------ CONTACT ------------------------ */
+
+iframe {
+  height: 21.25rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+form {
+  background-color: #f5f0f0;
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  font-style: italic;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 5px 4px;
+  border: 1px solid #cfe2cf;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #5eba5e;
+}
+
+input {
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  resize: none;
+  height: 9.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type=submit] {
+  width: auto;
+  color: #fff;
+  background-color: #5eba5e;
+  padding: 0.7rem 2rem;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ------------------------ Media Queries ------------------------ */
+
+ @media screen and (min-width: 46.875rem) {
+
+  header, main {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+
+  header nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  header nav li {
+    flex: 1 1 25%;
+  }
+
+  header nav li:not(:last-child) {
+    border-bottom: none;
+    border-right: 2px solid #fff;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap: 2rem;
+    align-items: start;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  p {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  /* ------------- Home ------------- */
+
+  .home main img {
+    margin-bottom: 4rem;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .home aside {
+    grid-column: 2 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .home h2:last-of-type {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+  }
+
+  .home p:nth-of-type(2) {
+    grid-column: 1 / 2;
+    grid-row: 5 / -1;
+  }
+
+  .home p:last-of-type {
+    grid-column: 2 / -1;
+    grid-row: 5 / -1;
+  }
+
+  /* ------------- Producten ------------- */
+
+  .producten div:first-of-type {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .producten div:nth-of-type(2) {
+    grid-column: 2 / -1;
+    grid-row: 3 / 5;
+  }
+
+  .producten div:last-of-type {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  /* ------------- Over ons ------------- */
+
+  .over-ons main img {
+    margin-bottom: 3rem;
+  }
+
+  .over-ons main img:first-of-type {
+    justify-self: right;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .over-ons main p:nth-of-type(2) {
+    grid-column: 2 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .over-ons main p:nth-of-type(3) {
+    text-align: right;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .over-ons main img:nth-of-type(2) {
+    grid-column: 2 / -1;
+    grid-row: 4 / 5;
+  }
+
+  .over-ons main img:last-of-type {
+    justify-self: right;
+    grid-column: 1 / 2;
+    grid-row: 5 / -1;
+  }
+
+  .over-ons main p:last-of-type {
+    grid-column: 2 / 3;
+    grid-row: 5 / -1;
+  }
+
+  /* ------------- Contact ------------- */
+
+  .contact form {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  .contact main ul {
+    grid-column: 2 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .contact iframe {
+    height: 100%;
+    margin-top: 0;
+    grid-column: 2 / -1;
+    grid-row: 4 / 5;
+  }
+}
+
+@media screen and (min-width: 70.3125rem) {
+
+  header, main {
+    padding-left: 2.8125rem;
+    padding-right: 2.8125rem;
+  }
+
+  header {
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1 + p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+
+  header {
+    margin-bottom: 5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h1 + p {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  a, p, th, td, li, label, input, textarea  {
+    font-size: 1.2rem;
+  }
+
+  .home main img {
+    margin-bottom: 5rem;
+  }
+
+  .home th:first-child {
+    width: 10rem;
+  }
+
+  .producten th:first-child {
+    width: 12rem;
+  }
+
+  .over-ons main img {
+    margin-bottom: 4rem;
+  }
+}
