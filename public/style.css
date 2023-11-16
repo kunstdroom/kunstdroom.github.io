@@ -176,16 +176,6 @@ main img {
   font-style: italic;
 }
 
-.event-landing>div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.event-landing span {
-  flex: 1 1 50%;
-}
-
 /* ------------------------ HOME ------------------------ */
 
 .home th:first-child {
@@ -220,10 +210,6 @@ main img {
 
 .courses main>h2 {
   margin-top: 3rem;
-}
-
-.courses main section:first-of-type p:last-of-type {
-  margin-bottom: 0;
 }
 
 /* ------------------------ CONTACT ------------------------ */
@@ -276,6 +262,16 @@ iframe {
 
   .content-landing {
     grid-column: 1 / -1;
+  }
+
+  .event-landing>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .event-landing span {
+    flex: 1 1 50%;
   }
 
   /* ------------- Home ------------- */
@@ -386,9 +382,12 @@ iframe {
     font-size: 3rem;
   }
 
+  .content-landing {
+    margin-bottom: 3rem;
+  }
+
   .content-landing p {
     font-size: 1.3rem;
-    margin-bottom: 3rem;
   }
 }
 
@@ -418,8 +417,11 @@ iframe {
     width: 10rem;
   }
 
+  .content-landing {
+    margin-bottom: 4rem;
+  }
+
   .content-landing p {
     font-size: 1.5rem;
-    margin-bottom: 4rem;
   }
 }
