@@ -62,10 +62,10 @@ header nav li:not(:last-child) {
   margin-bottom: 2px;
 }
 
-header nav a {
+.green-button {
   display: block;
   color: #fff;
-  background-color: #94d194;
+  background-color: #5eba5e;
   padding-top: 0.65rem;
   padding-bottom: 0.65rem;
   text-align: center;
@@ -73,11 +73,15 @@ header nav a {
   transition: background-color 0.5s;
 }
 
-header nav a:hover {
+.green-button:hover {
   background-color: #3d8f3d;
 }
 
-.current {
+header nav .green-button {
+  background-color: #94d194;
+}
+
+header nav .current {
   background-color: #5eba5e;
 }
 
@@ -107,11 +111,6 @@ h2 {
 h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-}
-
-h1+p {
-  font-style: italic;
-  margin-bottom: 2rem;
 }
 
 p {
@@ -144,7 +143,6 @@ td:nth-child(2) {
 
 footer {
   color: #fff;
-  /* background-color: #5eba5e; */
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-top: 2rem;
@@ -170,6 +168,24 @@ main img {
   margin-bottom: 1rem;
 }
 
+.content-landing {
+  margin-bottom: 2rem;
+}
+
+.content-landing p {
+  font-style: italic;
+}
+
+.event-landing>div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.event-landing span {
+  flex: 1 1 50%;
+}
+
 /* ------------------------ HOME ------------------------ */
 
 .home th:first-child {
@@ -185,7 +201,6 @@ main img {
   border-radius: 30px;
   padding: 2rem;
   margin-bottom: 3rem;
-  /* background-color: #5299e0; */
   color: #fff;
 
   background-color: #00b7ff;
@@ -201,44 +216,7 @@ main img {
   width: 100%;
 }
 
-/* ------------------------ PRODUCTEN ------------------------ */
-
-.producten h2 {
-  /* display: block; */
-  color: #fff;
-  background-color: #5eba5e;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-/* .producten h2:not(:first-of-type) {
-  margin-top: 3rem;
-} */
-
-.producten th {
-  font-weight: bold;
-}
-
-.producten th:first-child {
-  width: 10rem;
-}
-
 /* ------------------------ COURSES ------------------------ */
-
-.courses main a {
-  display: block;
-  color: #fff;
-  background-color: #5eba5e;
-  padding-top: 0.65rem;
-  padding-bottom: 0.65rem;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.5s;
-}
-
-.courses main a:hover {
-  background-color: #3d8f3d;
-}
 
 .courses main>h2 {
   margin-top: 3rem;
@@ -248,88 +226,15 @@ main img {
   margin-bottom: 0;
 }
 
-/* ------------------------ OVER ONS ------------------------ */
-
-.over-ons main img {
-  margin-bottom: 0.5rem;
-}
-
-.over-ons p:not(:first-of-type) {
-  margin-bottom: 3rem;
-}
-
 /* ------------------------ CONTACT ------------------------ */
 
-form {
-  background-color: #f5f0f0;
-  padding: 2rem;
-}
-
-label {
-  display: block;
-  font-style: italic;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 5px 4px;
-  border: 1px solid #cfe2cf;
-  transition: border 0.3s;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border: 1px solid #5eba5e;
-}
-
-input {
-  margin-bottom: 0.5rem;
-}
-
-textarea {
-  resize: none;
-  height: 9.5rem;
-  margin-bottom: 1.5rem;
-}
-
-input[type=submit] {
-  width: auto;
-  color: #fff;
-  background-color: #5eba5e;
-  padding: 0.7rem 2rem;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.contact main div:first-of-type {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 iframe {
-  height: 21.25rem;
   width: 100%;
   border: none;
 }
 
 .contact main ul li {
   margin-bottom: 1rem;
-}
-
-.contact main ul a {
-  display: block;
-  color: #fff;
-  background-color: #5eba5e;
-  padding-top: 0.65rem;
-  padding-bottom: 0.65rem;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.5s;
-}
-
-.contact main ul a:hover {
-  background-color: #3d8f3d;
 }
 
 /* ------------------------ Media Queries ------------------------ */
@@ -341,10 +246,13 @@ iframe {
     padding-right: 1.875rem;
   }
 
+  /* Stop overflow of hero image */
   header>a {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
+  /* Stop overflow of nav */
   header nav {
     margin-left: 0;
     margin-right: 0;
@@ -361,202 +269,105 @@ iframe {
 
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
     grid-column-gap: 2rem;
     align-items: start;
   }
 
-  h1 {
+  .content-landing {
     grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  }
-
-  p {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
   }
 
   /* ------------- Home ------------- */
 
-  .home main>h1 {
+  .home .event-landing {
     grid-column: 1 / -1;
-    grid-row: 2 / 3;
   }
 
-  .home main>p {
+  .home .content-landing {
     grid-column: 1 / -1;
-    grid-row: 3 / 4;
-  }
-
-  .event-landing {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-  }
-
-  .event-landing>div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .event-landing span {
-    flex: 1 1 50%;
-  }
-
-  .home main img:first-of-type {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-  }
-
-  .home aside {
-    grid-column: 2 / -1;
-    grid-row: 4 / 5;
-  }
-
-  /* ------------- Producten ------------- */
-
-  .producten div:first-of-type {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  .producten div:nth-of-type(2) {
-    grid-column: 2 / -1;
-    grid-row: 3 / 5;
-  }
-
-  .producten div:last-of-type {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
+    grid-row: auto;
   }
 
   /* ------------------------ COURSES ------------------------ */
 
+  .courses .content-landing {
+    grid-area: landing;
+  }
+
   .courses main a:first-of-type {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-area: register;
   }
 
   .courses main h2:first-of-type {
-    grid-column: 1 / -1;
-    grid-row: 4 / 5;
+    grid-area: project-atelier-title;
   }
 
   .courses main img:first-of-type {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-  }
-
-  .courses main section:first-of-type {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-  }
-
-  .courses main h2:nth-of-type(2) {
-    grid-column: 1 / -1;
-    grid-row: 6 / 7;
+    grid-area: project-atelier-image;
   }
 
   .courses main section:nth-of-type(2) {
-    grid-column: 1 / 2;
-    grid-row: 7 / 8;
-    text-align: right;
+    grid-area: project-atelier-description;
+  }
+
+  .courses main h2:nth-of-type(2) {
+    grid-area: living-model-title;
   }
 
   .courses main img:nth-of-type(2) {
-    grid-column: 2 / 3;
-    grid-row: 7 / 8;
-  }
-
-  .courses main h3:first-of-type {
-    grid-column: 2 / 3;
-    grid-row: 8 / 9;
-  }
-
-  .courses main img:nth-of-type(3) {
-    grid-column: 1 / 2;
-    grid-row: 9 / 10;
+    grid-area: living-model-image;
   }
 
   .courses main section:nth-of-type(3) {
-    grid-column: 2 / 3;
-    grid-row: 9 / 10;
-  }
-
-  .courses main h3:nth-of-type(2) {
-    grid-column: 1 / 2;
-    grid-row: 10 / 11;
+    grid-area: living-model-description;
     text-align: right;
   }
 
+  .courses main h3:first-of-type {
+    grid-area: friday-title;
+  }
+
+  .courses main img:nth-of-type(3) {
+    grid-area: friday-image;
+  }
+
   .courses main section:nth-of-type(4) {
-    grid-column: 1 / 2;
-    grid-row: 11 / 12;
+    grid-area: friday-description;
+  }
+
+  .courses main h3:nth-of-type(2) {
+    grid-area: saturday-title;
     text-align: right;
   }
 
   .courses main img:nth-of-type(4) {
-    grid-column: 2 / 3;
-    grid-row: 11 / 12;
+    grid-area: saturday-image;
   }
 
-  /* ------------- Over ons ------------- */
-
-  .over-ons main img {
-    margin-bottom: 3rem;
-  }
-
-  .over-ons main img:first-of-type {
-    justify-self: right;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  .over-ons main p:nth-of-type(2) {
-    grid-column: 2 / -1;
-    grid-row: 3 / 4;
-  }
-
-  .over-ons main p:nth-of-type(3) {
+  .courses main section:nth-of-type(5) {
+    grid-area: saturday-description;
     text-align: right;
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
   }
 
-  .over-ons main img:nth-of-type(2) {
-    grid-column: 2 / -1;
-    grid-row: 4 / 5;
-  }
-
-  .over-ons main img:last-of-type {
-    justify-self: right;
-    grid-column: 1 / 2;
-    grid-row: 5 / -1;
-  }
-
-  .over-ons main p:last-of-type {
-    grid-column: 2 / 3;
-    grid-row: 5 / -1;
+  .courses main {
+    grid-template-areas:
+      "landing                  landing"
+      "register                 ."
+      "project-atelier-title    project-atelier-title"
+      "project-atelier-image    project-atelier-description"
+      "living-model-title       living-model-title"
+      "living-model-description living-model-image"
+      ".                        friday-title"
+      "friday-image             friday-description"
+      "saturday-title           ."
+      "saturday-description     saturday-image";
   }
 
   /* ------------- Contact ------------- */
 
-  .contact main ul {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-  }
-
-  .contact main article:first-of-type {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-  }
-
   .contact main div:first-of-type {
-    height: 100%;
-    margin-top: 0;
     grid-column: 1 / -1;
-    grid-row: 4 / 5;
   }
 }
 
@@ -575,7 +386,7 @@ iframe {
     font-size: 3rem;
   }
 
-  h1+p {
+  .content-landing p {
     font-size: 1.3rem;
     margin-bottom: 3rem;
   }
@@ -599,28 +410,16 @@ iframe {
     font-size: 1.8rem;
   }
 
-  h1+p {
-    font-size: 1.5rem;
-    margin-bottom: 4rem;
-  }
-
-  a, p, th, td, li, label, input, textarea {
+  a, p, th, td, li {
     font-size: 1.2rem;
-  }
-
-  .home main img {
-    margin-bottom: 5rem;
   }
 
   .home th:first-child {
     width: 10rem;
   }
 
-  .producten th:first-child {
-    width: 12rem;
-  }
-
-  .over-ons main img {
+  .content-landing p {
+    font-size: 1.5rem;
     margin-bottom: 4rem;
   }
 }
