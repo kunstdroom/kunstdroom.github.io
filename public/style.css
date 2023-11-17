@@ -114,7 +114,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 aside {
@@ -178,13 +178,9 @@ main img {
 
 /* ------------------------ HOME ------------------------ */
 
-.home th:first-child {
+.home aside th:first-child {
   width: 6.5rem;
   text-align: right;
-}
-
-.home th:nth-child(2) {
-  font-weight: bold;
 }
 
 .event-landing {
@@ -270,7 +266,7 @@ iframe {
     flex-wrap: wrap;
   }
 
-  .event-landing span {
+  .event-landing section {
     flex: 1 1 50%;
   }
 
