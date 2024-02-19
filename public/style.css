@@ -194,8 +194,12 @@ main img {
   /* background by SVGBackgrounds.com */
 }
 
-.event-landing th, .event-landing td {
-  width: 50%;
+.event-landing th {
+  width: 25%;
+}
+
+.event-landing td {
+  width: 75%;
 }
 
 .event-landing table {
