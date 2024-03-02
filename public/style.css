@@ -206,6 +206,10 @@ main img {
   width: 100%;
 }
 
+.event-landing h1+p {
+  margin-bottom: 2rem;
+}
+
 /* ------------------------ COURSES ------------------------ */
 
 .courses main>h2 {
