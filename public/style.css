@@ -168,6 +168,10 @@ main img {
   margin-bottom: 1rem;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .content-landing {
   margin-bottom: 2rem;
 }
