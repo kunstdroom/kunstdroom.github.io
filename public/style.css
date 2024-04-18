@@ -180,6 +180,34 @@ strong {
   font-style: italic;
 }
 
+/* Responsive image gallery rules begin*/
+
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+}
+
 /* ------------------------ HOME ------------------------ */
 
 .home aside th:first-child {
@@ -218,6 +246,10 @@ strong {
 
 .courses main>h2 {
   margin-top: 3rem;
+}
+
+.courses main>h3 {
+  margin-top: 2rem;
 }
 
 /* ------------------------ CONTACT ------------------------ */
@@ -293,6 +325,10 @@ iframe {
     grid-row: auto;
   }
 
+  .home .image-gallery {
+    grid-column: 1 / -1;
+  }
+
   /* ------------------------ COURSES ------------------------ */
 
   .courses .content-landing {
@@ -307,11 +343,11 @@ iframe {
     grid-area: project-atelier-title;
   }
 
-  .courses main img:first-of-type {
+  .courses main section:nth-of-type(2) {
     grid-area: project-atelier-image;
   }
 
-  .courses main section:nth-of-type(2) {
+  .courses main section:nth-of-type(3) {
     grid-area: project-atelier-description;
   }
 
@@ -319,11 +355,11 @@ iframe {
     grid-area: living-model-title;
   }
 
-  .courses main img:nth-of-type(2) {
+  .courses main section:nth-of-type(4) {
     grid-area: living-model-image;
   }
 
-  .courses main section:nth-of-type(3) {
+  .courses main section:nth-of-type(5) {
     grid-area: living-model-description;
     text-align: right;
   }
@@ -332,11 +368,11 @@ iframe {
     grid-area: friday-title;
   }
 
-  .courses main img:nth-of-type(3) {
+  .courses main section:nth-of-type(6) {
     grid-area: friday-image;
   }
 
-  .courses main section:nth-of-type(4) {
+  .courses main section:nth-of-type(7) {
     grid-area: friday-description;
   }
 
@@ -345,11 +381,11 @@ iframe {
     text-align: right;
   }
 
-  .courses main img:nth-of-type(4) {
+  .courses main section:nth-of-type(8) {
     grid-area: saturday-image;
   }
 
-  .courses main section:nth-of-type(5) {
+  .courses main section:nth-of-type(9) {
     grid-area: saturday-description;
     text-align: right;
   }
