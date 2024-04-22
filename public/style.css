@@ -186,8 +186,9 @@ strong {
 .image-gallery {
   --gallery-gap: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--gallery-gap);
+  margin-bottom: 1rem;
 }
 
 .image-gallery .column {
@@ -199,10 +200,6 @@ strong {
 .image-item img {
   height: 100%;
   object-fit: cover;
-}
-
-.image-item:not(:first-of-type) {
-  display: none;
 }
 
 /* ------------------------ HOME ------------------------ */
@@ -309,14 +306,6 @@ iframe {
 
   .event-landing section {
     flex: 1 1 50%;
-  }
-
-  .image-gallery {
-    flex-direction: row;
-  }
-
-  .image-item:not(:first-of-type) {
-    display: block;
   }
 
   /* ------------- Home ------------- */
