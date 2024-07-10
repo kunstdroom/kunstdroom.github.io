@@ -186,6 +186,20 @@ strong {
   font-style: italic;
 }
 
+.register {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.register a {
+  flex: 1 1 100%;
+}
+
+.register a:not(:last-child) {
+  margin-bottom: 2px;
+}
+
 /* Responsive image gallery rules begin*/
 
 .image-gallery {
@@ -379,7 +393,7 @@ iframe {
     grid-area: landing;
   }
 
-  .courses main a:first-of-type {
+  .courses main .register {
     grid-area: register;
   }
 
@@ -437,7 +451,7 @@ iframe {
   .courses main {
     grid-template-areas:
       "landing                  landing"
-      "register                 ."
+      "register                 register"
       "project-atelier-title    project-atelier-title"
       "project-atelier-image    project-atelier-description"
       "living-model-title       living-model-title"
@@ -452,6 +466,15 @@ iframe {
 
   .contact main div:first-of-type {
     grid-column: 1 / -1;
+  }
+
+  .courses .register a {
+    flex: 1 1 25%;
+  }
+
+  .courses .register a:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2px;
   }
 }
 
@@ -470,7 +493,7 @@ iframe {
     font-size: 3rem;
   }
 
-  .content-landing {
+  .content-landing, .register {
     margin-bottom: 3rem;
   }
 
@@ -505,7 +528,7 @@ iframe {
     width: 10rem;
   }
 
-  .content-landing {
+  .content-landing, .register {
     margin-bottom: 4rem;
   }
 
