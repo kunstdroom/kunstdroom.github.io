@@ -306,7 +306,7 @@ iframe {
   }
 
   /* Stop overflow of hero image */
-  header>a {
+  body:not(.home) header>a {
     margin-left: 0;
     margin-right: 0;
   }
