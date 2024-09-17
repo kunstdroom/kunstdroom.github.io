@@ -536,12 +536,3 @@ iframe {
     font-size: 1.5rem;
   }
 }
-
-@media screen and (prefers-color-scheme: dark) {
-
-  /* TODO change navigation button colors */
-  body {
-    background-color: black;
-    color: white;
-  }
-}
