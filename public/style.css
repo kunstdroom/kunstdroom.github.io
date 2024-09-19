@@ -179,6 +179,11 @@ strong {
   font-style: italic;
 }
 
+.content-landing img {
+  /* 675px is the width of the hero image */
+  border-radius: 675px var(--main-border-radius) var(--main-border-radius) var(--main-border-radius);
+}
+
 .register {
   display: flex;
   flex-direction: row;
@@ -343,11 +348,11 @@ iframe {
   }
 
   .home .content-landing section:first-of-type {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
   }
 
   .home .content-landing section:nth-of-type(2) {
-    flex: 1 1 50%;
+    flex: 1 1 60%;
   }
 
   .event-landing>div {
