@@ -15,9 +15,10 @@
   font-weight: 400;
 }
 
+/* Variables */
 body {
   --gallery-gap: 10px;
-  --img-border-radius: 5px;
+  --main-border-radius: 5px;
 }
 
 header, main {
@@ -40,17 +41,8 @@ header>a {
   margin-right: calc(50% - 50vw);
 }
 
-header h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 header nav {
   margin-top: 0.5rem;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
 }
 
 header nav ul {
@@ -73,6 +65,7 @@ header nav li:not(:last-child) {
   background-color: #5eba5e;
   padding-top: 0.65rem;
   padding-bottom: 0.65rem;
+  border-radius: var(--main-border-radius);
   text-align: center;
   text-decoration: none;
   transition: background-color 0.5s;
@@ -171,7 +164,7 @@ img {
 
 main img {
   margin-bottom: 1rem;
-  border-radius: var(--img-border-radius);
+  border-radius: var(--main-border-radius);
 }
 
 strong {
@@ -200,7 +193,7 @@ strong {
   margin-bottom: 2px;
 }
 
-/* Responsive image gallery rules begin*/
+/* Responsive image gallery rules begin */
 
 .image-gallery {
   display: flex;
@@ -229,7 +222,7 @@ strong {
 
 .event-landing {
   border-radius: 30px;
-  padding: 2rem;
+  padding: 4rem 2rem;
   margin-bottom: 3rem;
   color: #fff;
 
@@ -272,7 +265,7 @@ strong {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: var(--img-border-radius);
+  border-radius: var(--main-border-radius);
   background: rgba(57, 57, 57, 0.502);
   top: 0;
   left: 0;
@@ -319,16 +312,8 @@ iframe {
     padding-right: 1.875rem;
   }
 
-  /* Stop overflow of hero image */
-  body:not(.home) header>a {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  /* Stop overflow of nav */
-  header nav {
-    margin-left: 0;
-    margin-right: 0;
+  header nav ul {
+    flex-wrap: nowrap;
   }
 
   header nav li {
@@ -351,14 +336,25 @@ iframe {
     grid-column: 1 / -1;
   }
 
-  .event-landing>div {
+  .home .content-landing {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    gap: 2rem;
   }
 
-  .event-landing section {
+  .home .content-landing section:first-of-type {
     flex: 1 1 50%;
+  }
+
+  .home .content-landing section:nth-of-type(2) {
+    flex: 1 1 50%;
+  }
+
+  .event-landing>div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-column-gap: 2rem;
+    align-items: start;
   }
 
   /* ------------- Home ------------- */
@@ -389,6 +385,15 @@ iframe {
 
   /* ------------------------ COURSES ------------------------ */
 
+  .courses .register a {
+    flex: 1 1 25%;
+  }
+
+  .courses .register a:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2px;
+  }
+
   .courses .content-landing {
     grid-area: landing;
   }
@@ -401,11 +406,11 @@ iframe {
     grid-area: project-atelier-title;
   }
 
-  .courses main section:nth-of-type(2) {
+  .courses main section:first-of-type {
     grid-area: project-atelier-image;
   }
 
-  .courses main section:nth-of-type(3) {
+  .courses main section:nth-of-type(2) {
     grid-area: project-atelier-description;
   }
 
@@ -413,11 +418,11 @@ iframe {
     grid-area: living-model-title;
   }
 
-  .courses main section:nth-of-type(4) {
+  .courses main section:nth-of-type(3) {
     grid-area: living-model-image;
   }
 
-  .courses main section:nth-of-type(5) {
+  .courses main section:nth-of-type(4) {
     grid-area: living-model-description;
     text-align: right;
   }
@@ -426,11 +431,11 @@ iframe {
     grid-area: friday-title;
   }
 
-  .courses main section:nth-of-type(6) {
+  .courses main section:nth-of-type(5) {
     grid-area: friday-image;
   }
 
-  .courses main section:nth-of-type(7) {
+  .courses main section:nth-of-type(6) {
     grid-area: friday-description;
   }
 
@@ -439,11 +444,11 @@ iframe {
     text-align: right;
   }
 
-  .courses main section:nth-of-type(8) {
+  .courses main section:nth-of-type(7) {
     grid-area: saturday-image;
   }
 
-  .courses main section:nth-of-type(9) {
+  .courses main section:nth-of-type(8) {
     grid-area: saturday-description;
     text-align: right;
   }
@@ -467,15 +472,6 @@ iframe {
   .contact main div:first-of-type {
     grid-column: 1 / -1;
   }
-
-  .courses .register a {
-    flex: 1 1 25%;
-  }
-
-  .courses .register a:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 2px;
-  }
 }
 
 @media screen and (min-width: 70.3125rem) {
@@ -483,10 +479,6 @@ iframe {
   header, main {
     padding-left: 2.8125rem;
     padding-right: 2.8125rem;
-  }
-
-  header {
-    margin-bottom: 4rem;
   }
 
   h1 {
@@ -503,10 +495,6 @@ iframe {
 }
 
 @media screen and (min-width: 93.75rem) {
-
-  header {
-    margin-bottom: 5rem;
-  }
 
   h1 {
     font-size: 4rem;
