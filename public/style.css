@@ -233,8 +233,7 @@ strong {
   color: #fff;
 
   padding: 3rem 0 3rem;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  margin: 0 calc(50% - 50vw) 3rem;
 }
 
 .event-landing th {
