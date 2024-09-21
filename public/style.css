@@ -46,6 +46,10 @@ header nav {
   margin-top: 0.5rem;
 }
 
+header nav h2 {
+  text-align: center;
+}
+
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -172,7 +176,7 @@ strong {
   font-weight: bold;
 }
 
-.content-landing {
+.content-landing, .btn-group {
   margin-bottom: 2rem;
 }
 
@@ -185,17 +189,17 @@ strong {
   border-radius: 675px var(--main-border-radius) var(--main-border-radius) var(--main-border-radius);
 }
 
-.register {
+.btn-group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.register a {
+.btn-group a {
   flex: 1 1 100%;
 }
 
-.register a:not(:last-child) {
+.btn-group a:not(:last-child) {
   margin-bottom: 2px;
 }
 
@@ -330,6 +334,10 @@ iframe {
     margin-right: 2px;
   }
 
+  header nav h2 {
+    text-align: left;
+  }
+
   main {
     display: grid;
     grid-template-columns: repeat(2, minmax(10px, 1fr));
@@ -362,6 +370,15 @@ iframe {
     align-items: start;
   }
 
+  .btn-group a {
+    flex: 1 1 25%;
+  }
+
+  .btn-group a:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 2px;
+  }
+
   /* ------------- Home ------------- */
 
   .home .event-landing {
@@ -390,20 +407,11 @@ iframe {
 
   /* ------------------------ COURSES ------------------------ */
 
-  .courses .register a {
-    flex: 1 1 25%;
-  }
-
-  .courses .register a:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 2px;
-  }
-
   .courses .content-landing {
     grid-area: landing;
   }
 
-  .courses main .register {
+  .courses main .btn-group {
     grid-area: register;
   }
 
@@ -490,7 +498,7 @@ iframe {
     font-size: 3rem;
   }
 
-  .content-landing, .register {
+  .content-landing, .btn-group {
     margin-bottom: 3rem;
   }
 
@@ -521,7 +529,7 @@ iframe {
     width: 10rem;
   }
 
-  .content-landing, .register {
+  .content-landing, .btn-group {
     margin-bottom: 4rem;
   }
 
