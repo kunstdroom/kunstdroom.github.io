@@ -23,10 +23,8 @@ body {
 
 header, main, .event-landing article {
   max-width: 92rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
 header {
@@ -93,17 +91,19 @@ a:hover {
 
 h1 {
   font-size: 2.6rem;
-  line-height: 2.9rem;
+  line-height: 2.6rem;
   margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.8rem;
+  line-height: 1.8rem;
   margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.3rem;
+  line-height: 1.3rem;
   margin-bottom: 1rem;
 }
 
@@ -215,6 +215,7 @@ strong {
 
 .home main h3 {
   font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .event-landing {
@@ -319,8 +320,7 @@ iframe {
 @media screen and (min-width: 47rem) {
 
   header, main, .event-landing article {
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
+    padding: 0 1.8rem;
   }
 
   header nav ul {
@@ -336,8 +336,17 @@ iframe {
     margin-right: 2px;
   }
 
+  header nav li:first-child {
+    margin-right: 1rem;
+  }
+
   header nav h2 {
     text-align: left;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
   main {
@@ -363,7 +372,8 @@ iframe {
   /* ------------- Home ------------- */
 
   .home main h2 {
-    font-size: 3.6rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 
   .home .content-landing {
@@ -530,15 +540,15 @@ iframe {
   }
 }
 
-@media screen and (min-width: 70.3125rem) {
+@media screen and (min-width: 70.3rem) {
 
   header, main, .event-landing article {
-    padding-left: 2.8125rem;
-    padding-right: 2.8125rem;
+    padding: 0 2.8rem;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   .content-landing, .btn-group {
@@ -548,20 +558,28 @@ iframe {
   .content-landing p {
     font-size: 1.3rem;
   }
+
+  .home main h2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 }
 
-@media screen and (min-width: 93.75rem) {
+@media screen and (min-width: 93.8rem) {
 
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
 
   h2 {
     font-size: 2.3rem;
+    line-height: 2.3rem;
   }
 
   h3, .home main h3 {
     font-size: 1.8rem;
+    line-height: 1.8rem;
   }
 
   a, p, th, td, li {
@@ -578,5 +596,10 @@ iframe {
 
   .content-landing p {
     font-size: 1.5rem;
+  }
+
+  .home main h2 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
   }
 }
