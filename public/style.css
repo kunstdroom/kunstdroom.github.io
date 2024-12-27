@@ -37,12 +37,14 @@ header nav {
 
 header nav h2 {
   text-align: center;
+  margin-bottom: 0;
 }
 
 header nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   gap: 5px;
 }
 
