@@ -21,7 +21,9 @@ body {
   --main-border-radius: 5px;
 }
 
-header, main, .event-landing article {
+header,
+main,
+.event-landing article {
   max-width: 92rem;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -115,7 +117,8 @@ table {
   text-align: left;
 }
 
-td, tr {
+td,
+tr {
   vertical-align: top;
 }
 
@@ -322,7 +325,9 @@ iframe {
 
 @media screen and (min-width: 47rem) {
 
-  header, main, .event-landing article {
+  header,
+  main,
+  .event-landing article {
     padding: 0 1.8rem;
   }
 
@@ -539,7 +544,9 @@ iframe {
 
 @media screen and (min-width: 70.3rem) {
 
-  header, main, .event-landing article {
+  header,
+  main,
+  .event-landing article {
     padding: 0 2.8rem;
   }
 
@@ -548,7 +555,8 @@ iframe {
     line-height: 4rem;
   }
 
-  .content-landing, .btn-group {
+  .content-landing,
+  .btn-group {
     margin-bottom: 3rem;
   }
 
@@ -574,12 +582,17 @@ iframe {
     line-height: 2.3rem;
   }
 
-  h3, .home main h3 {
+  h3,
+  .home main h3 {
     font-size: 1.8rem;
     line-height: 1.8rem;
   }
 
-  a, p, th, td, li {
+  a,
+  p,
+  th,
+  td,
+  li {
     font-size: 1.2rem;
   }
 
@@ -587,7 +600,8 @@ iframe {
     width: 10rem;
   }
 
-  .content-landing, .btn-group {
+  .content-landing,
+  .btn-group {
     margin-bottom: 4rem;
   }
 
