@@ -310,6 +310,10 @@ strong {
   margin-top: 2rem;
 }
 
+.courses main section:nth-of-type(2) div {
+  margin-bottom: 2rem;
+}
+
 /* ------------------------ CONTACT ------------------------ */
 
 iframe {
@@ -457,6 +461,9 @@ iframe {
 
   .courses main section:nth-of-type(2) {
     grid-area: sessions-current-info;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    column-gap: 1rem;
   }
 
   .courses main h2:first-of-type {
