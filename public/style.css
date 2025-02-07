@@ -451,19 +451,23 @@ iframe {
     grid-area: landing;
   }
 
-  .courses main .btn-group {
+  .courses main section:first-of-type {
     grid-area: register;
+  }
+
+  .courses main section:nth-of-type(2) {
+    grid-area: sessions-current-info;
   }
 
   .courses main h2:first-of-type {
     grid-area: project-atelier-title;
   }
 
-  .courses main section:first-of-type {
+  .courses main section:nth-of-type(3) {
     grid-area: project-atelier-image;
   }
 
-  .courses main section:nth-of-type(2) {
+  .courses main section:nth-of-type(4) {
     grid-area: project-atelier-description;
   }
 
@@ -471,11 +475,11 @@ iframe {
     grid-area: living-model-title;
   }
 
-  .courses main section:nth-of-type(3) {
+  .courses main section:nth-of-type(5) {
     grid-area: living-model-image;
   }
 
-  .courses main section:nth-of-type(4) {
+  .courses main section:nth-of-type(6) {
     grid-area: living-model-description;
     text-align: right;
   }
@@ -484,11 +488,11 @@ iframe {
     grid-area: friday-title;
   }
 
-  .courses main section:nth-of-type(5) {
+  .courses main section:nth-of-type(7) {
     grid-area: friday-image;
   }
 
-  .courses main section:nth-of-type(6) {
+  .courses main section:nth-of-type(8) {
     grid-area: friday-description;
   }
 
@@ -497,11 +501,11 @@ iframe {
     text-align: right;
   }
 
-  .courses main section:nth-of-type(7) {
+  .courses main section:nth-of-type(9) {
     grid-area: saturday-image;
   }
 
-  .courses main section:nth-of-type(8) {
+  .courses main section:nth-of-type(10) {
     grid-area: saturday-description;
     text-align: right;
   }
@@ -509,7 +513,8 @@ iframe {
   .courses main {
     grid-template-areas:
       "landing                  landing"
-      "register                 register"
+      "register                 ."
+      "sessions-current-info    sessions-current-info"
       "project-atelier-title    project-atelier-title"
       "project-atelier-image    project-atelier-description"
       "living-model-title       living-model-title"
