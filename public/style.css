@@ -51,7 +51,11 @@ header nav ul {
 }
 
 header nav li {
-  flex: 1 1 100%;
+  flex: 1 1 auto;
+}
+
+header nav li:first-child {
+  flex-basis: 100%;
 }
 
 .green-button {
@@ -345,6 +349,7 @@ iframe {
 
   header nav li:first-child {
     margin-right: 1rem;
+    flex-basis: auto;
   }
 
   header nav h2 {
