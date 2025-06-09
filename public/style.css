@@ -255,6 +255,11 @@ strong {
   margin-bottom: 1.5rem;
 }
 
+/* TODO temporary styling for summer workshops */
+.event-landing section:first-of-type img {
+  max-width: 25rem;
+}
+
 .home .image-item {
   position: relative;
   cursor: pointer;
