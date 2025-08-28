@@ -323,6 +323,50 @@ strong {
   margin-bottom: 2rem;
 }
 
+#sessions-info {
+  background: #f6f9f6;
+  border-radius: var(--main-border-radius);
+  box-shadow: 0 2px 8px rgba(60, 80, 60, 0.07);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid #e0e7e0;
+}
+
+#sessions-info h3,
+#sessions-info h4 {
+  color: #174B80;
+  margin-top: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
+#sessions-info ul {
+  margin-bottom: 1.2rem;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  list-style: disc inside;
+}
+
+#sessions-info li {
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+}
+
+#sessions-info p {
+  margin-bottom: 1rem;
+  font-size: 1.08rem;
+}
+
+#sessions-info a {
+  color: #174B80;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#sessions-info a:hover {
+  color: #009DAA;
+}
+
 /* ------------------------ CONTACT ------------------------ */
 
 iframe {
@@ -502,29 +546,15 @@ iframe {
   }
 
   .courses main h3:first-of-type {
-    grid-area: friday-title;
+    grid-area: saturday-title;
   }
 
   .courses main section:nth-of-type(7) {
-    grid-area: friday-image;
-  }
-
-  .courses main section:nth-of-type(8) {
-    grid-area: friday-description;
-  }
-
-  .courses main #saturday {
-    grid-area: saturday-title;
-    text-align: right;
-  }
-
-  .courses main section:nth-of-type(9) {
     grid-area: saturday-image;
   }
 
-  .courses main section:nth-of-type(10) {
+  .courses main section:nth-of-type(8) {
     grid-area: saturday-description;
-    text-align: right;
   }
 
   .courses main {
@@ -536,10 +566,8 @@ iframe {
       "project-atelier-image    project-atelier-description"
       "living-model-title       living-model-title"
       "living-model-description living-model-image"
-      ".                        friday-title"
-      "friday-image             friday-description"
-      "saturday-title           ."
-      "saturday-description     saturday-image";
+      ".                        saturday-title"
+      "saturday-image           saturday-description";
   }
 
   /* ------------- Contact ------------- */
