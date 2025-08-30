@@ -309,6 +309,32 @@ strong {
   text-align: right;
 }
 
+/* Highlight banner (home) */
+.info-banner {
+  background: linear-gradient(90deg, #174B80 0%, #009DAA 100%);
+  color: #fff;
+  padding: 0.9rem 1.25rem;
+  margin: -2.2rem auto 2rem;
+  /* pull it a bit closer to header */
+  max-width: 92rem;
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 0.98rem;
+}
+
+.info-banner p {
+  margin: 0;
+}
+
+.info-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.info-banner a:hover {
+  text-decoration: none;
+}
+
 /* ------------------------ COURSES ------------------------ */
 
 .courses main>h2 {
@@ -501,6 +527,11 @@ iframe {
 
   .home .image-item:hover .overlay {
     display: flex;
+  }
+
+  .info-banner {
+    margin-top: -1.4rem;
+    font-size: 1.05rem;
   }
 
   /* ------------------------ COURSES ------------------------ */
