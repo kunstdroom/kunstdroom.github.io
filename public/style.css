@@ -510,6 +510,9 @@ p { line-height: 1.7; }
 .event-workshop p:last-child { margin-bottom: 0; }
 .event-workshop ul { list-style: disc inside; margin-left: .5rem; margin-bottom: .5rem; }
 .event-workshop ul li { font-size: .9rem; font-weight: 300; margin-bottom: .2rem; }
+.event-workshop--highlight { background: #fff8e1; border: 1.5px solid #f5a623 !important; border-radius: 8px; padding: 1rem 1.25rem !important; margin-bottom: 1.5rem; }
+.event-workshop--highlight p { color: var(--text) !important; font-weight: 400 !important; font-size: .95rem; margin: 0; }
+.event-workshop-img { width: 100%; max-height: 14rem; object-fit: cover; border-radius: var(--r); box-shadow: var(--sh); margin-top: 1rem; }
 
 .past-events .event-card { opacity: .75; border-left-color: #a3a3a3; }
 .event-poster img { max-width: 16rem; border-radius: var(--r); box-shadow: var(--sh); }
