@@ -426,6 +426,26 @@ p { line-height: 1.7; }
 .register-box a { color: var(--teal); text-decoration: underline; font-weight: 500; }
 .register-box a:hover { color: var(--blue); }
 
+.perks-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.perk-card {
+  flex: 1 1 14rem;
+  display: flex; align-items: center; gap: 1rem;
+  background: #fff;
+  border: 1px solid rgba(137,214,181,.3);
+  border-radius: var(--r);
+  padding: 1.25rem 1.5rem;
+}
+.perk-card .perk-icon { font-size: 1.6rem; font-weight: 600; color: var(--teal); flex-shrink: 0; line-height: 1; }
+.perk-card p { margin: 0; font-size: .95rem; font-weight: 300; }
+
+.payment-box .payment-price { font-size: 2rem; font-weight: 300; color: var(--blue); margin: .75rem 0 1rem; }
+.payment-box .payment-price small { display: block; font-size: 1rem; font-weight: 300; color: var(--text-muted); margin-top: .25rem; }
+.payment-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding: .6rem 0; border-bottom: 1px dashed rgba(0,0,0,.12); }
+.payment-row:last-of-type { border-bottom: none; }
+.payment-label { color: var(--text-muted); font-size: .9rem; }
+.payment-value { font-weight: 500; color: var(--blue); }
+.payment-warning { font-size: .9rem; font-style: italic; color: var(--text-muted); margin-top: 1rem; }
+
 /* Atelier sections */
 .atelier-section { margin-bottom: 4rem; }
 .atelier-section:last-child { margin-bottom: 0; }
